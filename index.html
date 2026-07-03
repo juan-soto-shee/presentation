@@ -1,121 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juan Esteban Soto Shee | MetKinetics Portfolio</title>
-  <meta name="description" content="CV interactivo y portafolio técnico de Juan Esteban Soto Shee, Ingeniero Metalurgista especialista en operaciones, metalurgia, software industrial y capacitación." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juan Esteban Soto Shee | Ingeniería Metalúrgica y Software</title>
+  <meta name="description" content="Portafolio profesional de Juan Esteban Soto Shee: ingeniería metalúrgica, automatización, análisis de datos y software desarrollado bajo la marca MetKinetics." />
+  <style>
+    :root{--bg:#070b10;--bg2:#0d131b;--card:#101821;--line:#22303d;--text:#f5f7fb;--muted:#a9b5c3;--orange:#ff8a00;--orange2:#ffc15a;--blue:#7ba7c7;--shadow:0 18px 55px rgba(0,0,0,.38)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 70% 0%,rgba(255,138,0,.12),transparent 34%),linear-gradient(180deg,#05070a,#0a0f15 45%,#070b10);color:var(--text)}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1180px,92vw);margin:auto}.nav{position:sticky;top:0;z-index:50;background:rgba(7,11,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px}.brand img{height:44px;max-width:180px;object-fit:contain}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:.12em;font-weight:600}.menu{display:flex;gap:26px;color:#d9e0e8;font-size:14px}.menu a:hover{color:var(--orange)}.btn{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.13);padding:13px 18px;border-radius:12px;background:rgba(255,255,255,.04);font-weight:700}.btn.primary{background:linear-gradient(135deg,var(--orange),#ff6a00);border:0;color:#111}.hero{position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.08)}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070b10 0%,rgba(7,11,16,.95) 34%,rgba(7,11,16,.58) 70%,#070b10 100%),url('assets/img/foto-portfolio.png') right 8% center/auto 86% no-repeat;filter:contrast(1.04)}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,#070b10 100%)}.hero .wrap{position:relative;z-index:1;min-height:610px;display:flex;align-items:center}.heroText{max-width:650px}.eyebrow{color:var(--orange);letter-spacing:.34em;text-transform:uppercase;font-size:13px;font-weight:800}.hero h1{font-size:clamp(42px,6vw,76px);line-height:.97;margin:18px 0 18px;letter-spacing:-.06em}.hero p{font-size:19px;line-height:1.55;color:#d9e1e9;max-width:610px}.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.chip{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.045);padding:10px 14px;border-radius:12px;color:#dbe5ef;font-size:13px}.section{padding:72px 0;border-bottom:1px solid rgba(255,255,255,.07)}.secHead{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}.secHead h2{font-size:34px;margin:0;letter-spacing:-.03em}.secHead p{color:var(--muted);margin:8px 0 0;max-width:720px;line-height:1.55}.grid{display:grid;gap:18px}.about{grid-template-columns:1.1fr .9fr}.panel{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:28px;box-shadow:var(--shadow)}.panel h3{margin:0 0 14px;font-size:23px}.panel p,.panel li{color:#cbd5df;line-height:1.65}.specialties{grid-template-columns:repeat(5,1fr)}.spec{padding:24px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09)}.spec b{display:block;margin:10px 0 8px}.spec span{font-size:13px;color:var(--muted);line-height:1.45}.icon{font-size:27px;color:var(--orange)}
+    .softIntro{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:center}.softIntro img{width:100%;max-height:145px;object-fit:contain}.software{grid-template-columns:repeat(2,1fr)}.softCard{background:linear-gradient(180deg,rgba(16,24,33,.96),rgba(9,14,20,.96));border:1px solid rgba(255,255,255,.1);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}.softTop{height:230px;background:#0d1218;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.08)}.softTop img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:.35s}.softCard:hover .softTop img{transform:scale(1.045)}.softBody{padding:24px}.tag{display:inline-block;color:#111;background:linear-gradient(135deg,var(--orange),var(--orange2));font-size:11px;border-radius:99px;padding:5px 10px;font-weight:900;text-transform:uppercase}.softBody h3{margin:14px 0 6px;font-size:24px}.softBody p{color:#c4cfda;line-height:1.55}.meta{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.meta span{font-size:12px;color:#d8e2ec;border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:7px 10px}.features{margin:14px 0 18px;padding-left:18px;color:#cbd5df;line-height:1.55}.galleryBtn{cursor:pointer;color:var(--orange);font-weight:800;background:none;border:0;padding:0;font-size:14px}.timeline{display:grid;gap:14px}.job{display:grid;grid-template-columns:155px 1fr;gap:20px;padding:20px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08)}.job time{color:var(--orange);font-weight:900}.contact{grid-template-columns:1fr 1fr}.footer{padding:30px 0;color:#7f8b99;font-size:13px}.modal{position:fixed;inset:0;background:rgba(0,0,0,.86);z-index:100;display:none;align-items:center;justify-content:center;padding:28px}.modal.on{display:flex}.modalBox{width:min(1100px,94vw);background:#080d13;border:1px solid rgba(255,255,255,.14);border-radius:22px;overflow:hidden}.modalHead{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.1)}.close{font-size:28px;background:transparent;border:0;color:white;cursor:pointer}.modalImg{height:min(70vh,680px);display:flex;align-items:center;justify-content:center;background:#020406}.modalImg img{max-width:100%;max-height:100%;object-fit:contain}.thumbs{display:flex;gap:10px;padding:14px;overflow:auto}.thumbs img{width:110px;height:65px;object-fit:cover;border-radius:10px;opacity:.65;border:2px solid transparent;cursor:pointer}.thumbs img.active{opacity:1;border-color:var(--orange)}
+    @media(max-width:850px){.menu{display:none}.hero:before{background:linear-gradient(180deg,rgba(7,11,16,.58),#070b10 82%),url('assets/img/foto-portfolio.png') center top/100% auto no-repeat}.hero .wrap{min-height:720px;align-items:end;padding-bottom:55px}.about,.software,.contact,.softIntro{grid-template-columns:1fr}.specialties{grid-template-columns:1fr 1fr}.job{grid-template-columns:1fr}.secHead{display:block}.brand img{height:38px}.hero h1{font-size:42px}}@media(max-width:520px){.specialties{grid-template-columns:1fr}.hero p{font-size:16px}.btn{width:100%;justify-content:center}.softTop{height:180px}}
+  </style>
 </head>
 <body>
-  <div class="noise"></div>
-  <header class="site-header">
-    <a href="#inicio" class="brand"><span class="brand-mark">M</span><span>MetKinetics</span></a>
-    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-    <nav class="nav">
-      <a href="#perfil">Perfil</a><a href="#experiencia">Experiencia</a><a href="#software">Software</a><a href="#competencias">Competencias</a><a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="inicio" class="hero section">
-      <div class="hero-content reveal">
-        <p class="eyebrow">Marca personal asociada a MetKinetics</p>
-        <h1>Juan Esteban Soto Shee</h1>
-        <h2>Ingeniero Metalurgista · Process Engineer · Software Industrial</h2>
-        <p class="lead">24 años de experiencia en operaciones mineras, metalurgia, capacitación técnica y desarrollo de herramientas digitales para procesos industriales.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="assets/docs/CV_Juan_Soto_Shee_2026.pdf" download>Descargar CV</a>
-          <a class="btn" href="#software">Ver MetKinetics Lab</a>
-        </div>
-        <div class="metrics">
-          <div><strong>24+</strong><span>Años de experiencia</span></div>
-          <div><strong>7</strong><span>Herramientas destacadas</span></div>
-          <div><strong>360°</strong><span>Operación · Data · Software</span></div>
-        </div>
-      </div>
-      <div class="hero-card reveal">
-        <div class="photo-frame"><img src="assets/img/foto-juan.png" alt="Foto profesional de Juan Esteban Soto Shee"></div>
-        <div class="status-card"><span></span> Disponible para proyectos, asesorías y oportunidades profesionales</div>
-      </div>
-    </section>
-
-    <section id="perfil" class="section split">
-      <div class="reveal">
-        <p class="eyebrow">Perfil ejecutivo</p>
-        <h2>Liderazgo metalúrgico con enfoque tecnológico</h2>
-      </div>
-      <div class="panel reveal">
-        <p>Líder metalurgista con experiencia integral en operación, laboratorio e I+D. Experto en control de plantas concentradoras e hidrometalurgia, pilotaje y formación técnica minera.</p>
-        <p>Integra conocimiento de procesos, gestión operativa y desarrollo de software para crear soluciones aplicadas a continuidad operacional, análisis de datos y optimización de procesos.</p>
-      </div>
-    </section>
-
-    <section id="experiencia" class="section">
-      <p class="eyebrow reveal">Trayectoria</p>
-      <h2 class="reveal">Experiencia profesional destacada</h2>
-      <div class="timeline">
-        <article class="timeline-item reveal"><span>2025 – 2026</span><h3>Jefe de Operaciones LX/SX/EW · Report Minería</h3><p>Planificación con cliente, control operacional, cumplimiento de metas y coordinación de equipos multidisciplinarios.</p></article>
-        <article class="timeline-item reveal"><span>2023 – 2025</span><h3>Supervisor Descarga y Logística · YURA Chile</h3><p>Puesta en marcha del servicio, logística segura hacia Collahuasi y soporte técnico en preparación de lechada de cal.</p></article>
-        <article class="timeline-item reveal"><span>2022 – 2023</span><h3>Jefe Unidad Metalurgia · Cobre y Metales</h3><p>Responsable de metalurgia, evaluación de plantas y gestión de negocios mineros.</p></article>
-        <article class="timeline-item reveal"><span>2020 – 2022</span><h3>Director Diseño de Productos · Productora Informática C137</h3><p>Fundador de startup de software industrial y desarrollo de simuladores de alta fidelidad para minería y seguridad.</p></article>
-        <article class="timeline-item reveal"><span>2014 – 2019</span><h3>Instructor Avanzado · CEIM</h3><p>Formación de ingenieros, técnicos y operadores en procesos metalúrgicos, hidrometalurgia y procesamiento de minerales.</p></article>
-        <article class="timeline-item reveal"><span>2002 – 2014</span><h3>SERNAGEOMIN · SQM · CIMM T&S</h3><p>Ingeniería de proyectos, metalurgia de proyectos, supervisión SX/EW y jefatura de turno.</p></article>
-      </div>
-    </section>
-
-    <section id="software" class="section">
-      <p class="eyebrow reveal">MetKinetics Lab</p>
-      <h2 class="reveal">Software y herramientas desarrolladas</h2>
-      <p class="section-intro reveal">Portafolio aplicado a procesos metalúrgicos, simulación, análisis estadístico, organización empresarial y memorias técnicas.</p>
-      <div class="software-grid">
-        <article class="software-card reveal" data-gallery="grinding"><img src="assets/img/software/grinding/mol1.png" alt="Grinding Simulator"><div><span>Plantas concentradoras</span><h3>MetKinetics Grinding Simulator</h3><p>Simulación de molienda y clasificación, balances de masa, energía, granulometría y búsqueda de objetivos.</p></div></article>
-        <article class="software-card reveal" data-gallery="flotation"><img src="assets/img/software/flotation/flot1.png" alt="Flotation Simulator"><div><span>Flotación</span><h3>MetKinetics Flotation Simulator</h3><p>Modelamiento y visualización de circuitos de flotación con resultados en tiempo real.</p></div></article>
-        <article class="software-card reveal" data-gallery="organizer"><img src="assets/img/software/organizer/org1.png" alt="Organizer"><div><span>Gestión organizacional</span><h3>MetKinetics Organizer</h3><p>Organigrama interactivo y gestión visual de estructuras internas desde datos tabulados.</p></div></article>
-        <article class="software-card reveal" data-gallery="modelos"><img src="assets/img/software/modelos/mat1.png" alt="Modelos Matemáticos"><div><span>Machine Learning</span><h3>Modelos Matemáticos de Proceso</h3><p>Modelos predictivos, bootstrapping y validación estadística aplicada a variables de proceso.</p></div></article>
-        <article class="software-card reveal" data-gallery="stats"><img src="assets/img/software/stats/stats1.png" alt="Análisis Estadístico"><div><span>Data analytics</span><h3>Análisis Estadístico</h3><p>Herramientas de análisis, comparación de variables, visualización y soporte a toma de decisiones.</p></div></article>
-        <article class="software-card reveal" data-gallery="lab"><img src="assets/img/software/lab/met1.png" alt="Laboratorio Metalúrgico"><div><span>Laboratorio</span><h3>Laboratorio Metalúrgico</h3><p>Gestión y cálculo de variables de laboratorio para apoyo operacional y control de procesos.</p></div></article>
-        <article class="software-card reveal" data-gallery="anclajes"><img src="assets/img/software/anclajes/mc1.png" alt="Memoria de cálculo"><div><span>Ingeniería aplicada</span><h3>Memoria de Cálculo de Anclajes</h3><p>Herramienta técnica para documentación, cálculos y trazabilidad de memorias de ingeniería.</p></div></article>
-      </div>
-    </section>
-
-    <section id="competencias" class="section skills-section">
-      <p class="eyebrow reveal">Competencias</p>
-      <h2 class="reveal">Especialidades clave</h2>
-      <div class="skills-grid reveal">
-        <div><h3>Metalurgia</h3><p>Molienda, flotación, lixiviación, SX/EW, balances metalúrgicos, pilotaje y control operacional.</p></div>
-        <div><h3>Gestión</h3><p>Liderazgo de equipos, planificación, continuidad operacional, seguridad y gestión de contratos.</p></div>
-        <div><h3>Software</h3><p>Python, Excel avanzado, Power BI, Data Studio, VS Code, simulación y automatización de reportes.</p></div>
-        <div><h3>Modelamiento</h3><p>Estadística, Minitab, Statsmodels, modelos predictivos, análisis de tendencias y optimización.</p></div>
-      </div>
-    </section>
-
-    <section id="contacto" class="section contact">
-      <div class="reveal">
-        <p class="eyebrow">Contacto</p>
-        <h2>Conversemos sobre ingeniería, procesos y software industrial.</h2>
-      </div>
-      <div class="contact-card reveal">
-        <a href="mailto:juan.soto.shee@gmail.com">juan.soto.shee@gmail.com</a>
-        <a href="tel:+56956020757">+56 9 5602 0757</a>
-        <span>Antofagasta · Chile</span>
-        <a class="btn primary" href="assets/docs/CV_Juan_Soto_Shee_2026.pdf" download>Descargar CV PDF</a>
-      </div>
-    </section>
-  </main>
-
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="close" aria-label="Cerrar">×</button>
-    <button class="prev" aria-label="Anterior">‹</button>
-    <img alt="Captura de software" />
-    <button class="next" aria-label="Siguiente">›</button>
-    <p></p>
-  </div>
-
-  <footer>© 2026 Juan Esteban Soto Shee · Powered by MetKinetics</footer>
-  <script src="js/app.js"></script>
-</body>
-</html>
+<header class="nav"><div class="wrap navin"><a class="brand" href="#inicio"><img src="assets/img/metkinetics-logo.png" alt="MetKinetics"><span>Juan Soto Shee<small>Ingeniería + Software</small></span></a><nav class="menu"><a href="#sobre-mi">Sobre mí</a><a href="#experiencia">Experiencia</a><a href="#software">Software</a><a href="#contacto">Contacto</a></nav><a class="btn primary" href="assets/docs/CV_Juan_Soto_Shee_2026.pdf" download>Descargar CV</a></div></header>
+<section id="inicio" class="hero"><div class="wrap"><div class="heroText"><div class="eyebrow">Ingeniería metalúrgica</div><h1>Juan Esteban Soto Shee</h1><p>Ingeniero de procesos con foco en minería, análisis operacional, automatización y desarrollo de software aplicado. Integro experiencia de terreno con herramientas digitales para convertir datos en decisiones útiles.</p><div class="cta"><a class="btn primary" href="#software">Ver software</a><a class="btn" href="#sobre-mi">Conocer perfil</a></div><div class="chips"><span class="chip">Molienda y conminución</span><span class="chip">Hidrometalurgia</span><span class="chip">Python / Excel / Dashboards</span><span class="chip">Automatización</span></div></div></div></section>
+<section id="sobre-mi" class="section"><div class="wrap grid about"><div class="panel"><div class="eyebrow">Sobre mí</div><h2>Perfil profesional</h2><p>Combino experiencia operacional en procesos mineros con desarrollo de soluciones digitales. Mi enfoque es práctico: crear herramientas simples, robustas y orientadas a mejorar control, seguimiento y análisis de procesos.</p><p>Este sitio presenta mi perfil profesional y una muestra de software desarrollado bajo la marca <b>MetKinetics</b>, creada como línea personal para agrupar herramientas técnicas de ingeniería y automatización.</p></div><div class="panel"><h3>Especialidades</h3><ul><li>Operación y análisis de procesos metalúrgicos.</li><li>Modelamiento, simulación y evaluación de circuitos.</li><li>Automatización de reportes y herramientas de cálculo.</li><li>Desarrollo de aplicaciones para apoyo operacional.</li></ul></div></div></section>
+<section class="section"><div class="wrap"><div class="secHead"><div><div class="eyebrow">Áreas de especialización</div><h2>Ingeniería aplicada a datos y operación</h2></div></div><div class="grid specialties"><div class="spec"><div class="icon">⚗</div><b>Hidrometalurgia</b><span>Lixiviación, SX/EW y optimización de procesos.</span></div><div class="spec"><div class="icon">⚙</div><b>Conminución</b><span>Molienda, clasificación y circuitos SAG/bolas.</span></div><div class="spec"><div class="icon">▟</div><b>Análisis de datos</b><span>Indicadores, tendencias, estadística y visualización.</span></div><div class="spec"><div class="icon">⌘</div><b>Automatización</b><span>Herramientas digitales para control y reportabilidad.</span></div><div class="spec"><div class="icon">▣</div><b>Gestión técnica</b><span>Control documental, seguimiento y mejora continua.</span></div></div></div></section>
+<section id="software" class="section"><div class="wrap"><div class="grid softIntro panel"><img src="assets/img/metkinetics-logo.png" alt="MetKinetics"><div><div class="eyebrow">Software desarrollado</div><h2>MetKinetics Lab</h2><p>MetKinetics es la marca que agrupa mis desarrollos de software técnico para minería: simuladores, dashboards, modelos, aplicaciones de cálculo y herramientas de apoyo a la gestión operacional.</p></div></div><br><div class="grid software" id="softwareGrid"></div></div></section>
+<section id="experiencia" class="section"><div class="wrap"><div class="secHead"><div><div class="eyebrow">Trayectoria</div><h2>Experiencia y enfoque</h2><p>Perfil orientado a operación, análisis, gestión de procesos y desarrollo de soluciones digitales para entornos industriales.</p></div></div><div class="timeline"><div class="job"><time>Minería</time><div><b>Procesos metalúrgicos y operación</b><p>Experiencia en análisis operacional, seguimiento de indicadores, control de variables y soporte técnico a procesos.</p></div></div><div class="job"><time>Software</time><div><b>Desarrollo de herramientas técnicas</b><p>Aplicaciones en Python, Excel, dashboards y automatización para resolver necesidades reales de operación e ingeniería.</p></div></div></div></div></section>
+<section id="contacto" class="section"><div class="wrap grid contact"><div><div class="eyebrow">Contacto</div><h2>Conversemos</h2><p style="color:#cbd5df;line-height:1.6">Disponible para oportunidades profesionales, colaboración técnica y desarrollo de soluciones de ingeniería aplicada.</p></div><div class="panel"><p><b>Email:</b> contacto@metkinetics.cl</p><p><b>Ubicación:</b> Antofagasta, Chile</p><a class="btn primary" href="mailto:contacto@metkinetics.cl">Enviar mensaje</a></div></div></section>
+<footer class="footer"><div class="wrap">© 2026 Juan Esteban Soto Shee · Software desarrollado bajo marca MetKinetics.</div></footer>
+<div class="modal" id="modal"><div class="modalBox"><div class="modalHead"><b id="modalTitle">Galería</b><button class="close" onclick="closeModal()">×</button></div><div class="modalImg"><img id="modalMain" src="" alt="Captura"></div><div class="thumbs" id="thumbs"></div></div></div>
+<script>
+const softwares=[
+{title:'MetKinetics Grinding Simulator',area:'Conminución',cover:'assets/img/software/grinding/mol1.png',imgs:['assets/img/software/grinding/mol1.png','assets/img/software/grinding/mol2.png','assets/img/software/grinding/mol3.png','assets/img/software/grinding/mol4.png'],desc:'Simulador de circuitos de molienda para análisis de variables, balance, carga circulante y evaluación de escenarios operacionales.',tech:['Python','Modelos matemáticos','Molienda SAG/Bolas'],features:['Análisis de circuito de molienda','Evaluación de variables operacionales','Visualización de resultados']},
+{title:'MetKinetics Flotation Simulator',area:'Flotación',cover:'assets/img/software/flotation/flot1.png',imgs:['assets/img/software/flotation/flot1.png','assets/img/software/flotation/flot2.png','assets/img/software/flotation/flot3.png'],desc:'Herramienta para representar y analizar circuitos de flotación, variables de operación y comportamiento del proceso.',tech:['Python','Simulación','Flotación'],features:['Seguimiento de variables clave','Interfaz técnica para análisis','Apoyo a evaluación metalúrgica']},
+{title:'MetKinetics Organizer',area:'Gestión',cover:'assets/img/software/organizer/org1.png',imgs:['assets/img/software/organizer/org1.png','assets/img/software/organizer/org2.png'],desc:'Aplicación para organizar información interna, estructura de equipos, cargos, áreas y datos de contacto en formato interactivo.',tech:['Python','Gestión','Organigrama'],features:['Visualización ordenada de estructura','Búsqueda y navegación simple','Base para gestión interna']},
+{title:'Análisis Estadístico Operacional',area:'Data Analytics',cover:'assets/img/software/analisis-estadistico/stats1.png',imgs:['assets/img/software/analisis-estadistico/stats1.png','assets/img/software/analisis-estadistico/stats2.png','assets/img/software/analisis-estadistico/stats3.png','assets/img/software/analisis-estadistico/stats4.png'],desc:'Módulo de análisis estadístico para revisar comportamiento de variables, tendencias, dispersión y apoyo a la toma de decisiones.',tech:['Estadística','Dashboards','Datos'],features:['Gráficos y tendencias','Análisis de variabilidad','Interpretación operacional']},
+{title:'Laboratorio Metalúrgico',area:'Laboratorio',cover:'assets/img/software/laboratorio-metalurgico/met1.png',imgs:['assets/img/software/laboratorio-metalurgico/met1.png','assets/img/software/laboratorio-metalurgico/met2.png','assets/img/software/laboratorio-metalurgico/met3.png'],desc:'Sistema para apoyar registro, seguimiento y evaluación de información de laboratorio metalúrgico.',tech:['Metalurgia','Reportabilidad','Control'],features:['Ordenamiento de datos de ensayo','Seguimiento de resultados','Apoyo a reportes técnicos']},
+{title:'Modelos Matemáticos',area:'Modelamiento',cover:'assets/img/software/modelos-matematicos/mat1.png',imgs:['assets/img/software/modelos-matematicos/mat1.png','assets/img/software/modelos-matematicos/mat2.png','assets/img/software/modelos-matematicos/mat3.png'],desc:'Herramientas para aplicar modelos de cálculo, análisis de sensibilidad y representación de comportamiento operacional.',tech:['Modelamiento','Python','Ingeniería'],features:['Cálculos técnicos estructurados','Evaluación de escenarios','Visualización de modelos']},
+{title:'Memoria de Cálculo de Anclajes',area:'Ingeniería',cover:'assets/img/software/mc-anclajes/mc1.png',imgs:['assets/img/software/mc-anclajes/mc1.png','assets/img/software/mc-anclajes/mc2.png'],desc:'Aplicación orientada a estructurar cálculos, datos técnicos y respaldo documental para memorias de ingeniería.',tech:['Cálculo','Documentación','Ingeniería'],features:['Registro de parámetros','Apoyo a memoria técnica','Estandarización de cálculos']}
+];
+const grid=document.getElementById('softwareGrid');
+grid.innerHTML=softwares.map((s,i)=>`<article class="softCard"><div class="softTop"><img src="${s.cover}" alt="${s.title}"></div><div class="softBody"><span class="tag">${s.area}</span><h3>${s.title}</h3><p>${s.desc}</p><div class="meta">${s.tech.map(t=>`<span>${t}</span>`).join('')}</div><ul class="features">${s.features.map(f=>`<li>${f}</li>`).join('')}</ul><button class="galleryBtn" onclick="openModal(${i})">Ver capturas →</button></div></article>`).join('');
+const modal=document.getElementById('modal'), main=document.getElementById('modalMain'), thumbs=document.getElementById('thumbs'), title=document.getElementById('modalTitle');
+function openModal(i){const s=softwares[i]; title.textContent=s.title; main.src=s.imgs[0]; thumbs.innerHTML=s.imgs.map((img,k)=>`<img class="${k==0?'active':''}" src="${img}" onclick="setImg('${img}',this)">`).join(''); modal.classList.add('on')}
+function setImg(src,el){main.src=src; document.querySelectorAll('.thumbs img').forEach(x=>x.classList.remove('active')); el.classList.add('active')}
+function closeModal(){modal.classList.remove('on')} modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+</script>
+</body></html>
