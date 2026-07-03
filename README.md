@@ -1,6 +1,5 @@
-# Juan Esteban Soto Shee - Portafolio Web
+# Juan Soto Shee Portfolio
 
-Sitio web personal listo para publicar en GitHub Pages.
+Versión ajustada: nombre más pequeño en portada y especialidad con mayor protagonismo visual.
 
-## Publicación
-Subir el contenido de esta carpeta al repositorio `presentation` y activar GitHub Pages desde Settings > Pages > Deploy from branch > main > root.
+Subir contenido completo a GitHub Pages desde la rama main / root.
