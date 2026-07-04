@@ -100,6 +100,11 @@ const softwares=[
 {title:'MetKinetics ML',area:'Modelamiento',cover:'assets/img/software/modelos-matematicos/mat1.png',imgs:['assets/img/software/modelos-matematicos/mat1.png','assets/img/software/modelos-matematicos/mat2.png','assets/img/software/modelos-matematicos/mat3.png'],desc:'Herramientas para aplicar modelos de cálculo, análisis de sensibilidad y representación de comportamiento operacional.',tech:['Modelamiento','Python','Ingeniería'],features:['Cálculos técnicos estructurados','Evaluación de escenarios','Visualización de modelos']},
 {title:'MetKinetics Certia',area:'Ingeniería',cover:'assets/img/software/mc-anclajes/mc1.png',imgs:['assets/img/software/mc-anclajes/mc1.png','assets/img/software/mc-anclajes/mc2.png'],desc:'Modelamiento Inteligente de Anclajes. Módulo avanzado para el diseño, cálculo estructural y validación de puntos de anclaje para trabajos en altura.',tech:['Cálculo','Documentación','Ingeniería'],features:['Registro de parámetros','Apoyo a memoria técnica','Estandarización de cálculos']}
 ];
+const imageVersion='20260704';
+softwares.forEach(s=>{
+  s.cover=`${s.cover}?v=${imageVersion}`;
+  s.imgs=s.imgs.map(img=>`${img}?v=${imageVersion}`);
+});
 const grid=document.getElementById('softwareGrid');
 grid.innerHTML=softwares.map((s,i)=>`<article class="softCard"><div class="softTop" onclick="openModal(${i})"><img src="${s.cover}" alt="${s.title}" loading="eager" decoding="async"></div><div class="softBody"><span class="tag">${s.area}</span><h3>${s.title}</h3><p>${s.desc}</p><div class="meta">${s.tech.map(t=>`<span>${t}</span>`).join('')}</div><ul class="features">${s.features.map(f=>`<li>${f}</li>`).join('')}</ul><button class="galleryBtn" onclick="openModal(${i})">Ver capturas →</button></div></article>`).join('');
 const modal=document.getElementById('modal'), main=document.getElementById('modalMain'), thumbs=document.getElementById('thumbs'), title=document.getElementById('modalTitle');
